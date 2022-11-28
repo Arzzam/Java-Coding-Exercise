@@ -36,8 +36,26 @@ package _2_Control_Flow;
 //        NOTE: Do not add a main method to solution code.
 
 
-public class Exercise15 {
+public class _15_sumOdd {
     public static void main(String[] args) {
+        System.out.println(sumOdd(-1, 100));
+    }
 
+    public static boolean isOdd (int num){
+        if (num < 0)
+            return false;
+        else return num % 2 != 0;
+    }
+
+    public static int sumOdd (int s, int e){
+        int sum = 0;
+        if (s <= e && s > 0){
+            for (int i = s ; i <= e ; i++){
+                if (isOdd(i))
+                    sum += i;
+            }
+        }else
+            return -1;
+        return sum;
     }
 }
