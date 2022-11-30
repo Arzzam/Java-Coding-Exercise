@@ -32,15 +32,16 @@ package _2_Control_Flow;
 
 public class _25_FlourPacker {
     public static void main(String[] args) {
-        System.out.println(canPack(1,0,4));
+        System.out.println(canPack(0, 5, 5));
     }
 
-    public static boolean canPack (int big, int small, int goal ){
+    public static boolean canPack(int big, int small, int goal) {
         if (goal < 0 || big < 0 || small < 0)
             return false;
-        int bigPack = goal / 5;
-        int smallPack = goal - (bigPack * 5);
+        int bigPack, smallPack;
 
+        bigPack = (goal/5 <= big) ? goal / 5 : big;
+        smallPack = goal - bigPack*5;
         return bigPack <= big && smallPack <= small;
     }
 }
