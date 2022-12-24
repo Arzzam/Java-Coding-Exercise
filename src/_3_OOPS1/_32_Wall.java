@@ -62,7 +62,7 @@ public class _32_Wall {
     }
 
     public void setHeight(double height) {
-        this.height = width < 0 ? 0 : height;
+        this.height = height < 0 ? 0 : height;
     }
 
     public void setWidth(double width) {
